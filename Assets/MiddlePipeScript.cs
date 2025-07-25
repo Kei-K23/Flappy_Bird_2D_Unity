@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class MiddlePipeScript : MonoBehaviour
 {
-    public ScoreLogicManagerScript scoreLogicManagerScript;
+    public LogicManagerScript logicManagerScript;
     void Start()
     {
-        scoreLogicManagerScript = GameObject.FindGameObjectWithTag("ScoreLogicTag").GetComponent<ScoreLogicManagerScript>();
+        logicManagerScript = GameObject.FindGameObjectWithTag("ScoreLogicTag").GetComponent<LogicManagerScript>();
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class MiddlePipeScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
-            scoreLogicManagerScript.addScore();
+            logicManagerScript.AddScore();
         }
     }
 }
